@@ -13,8 +13,8 @@ app.set('views', path.join(__dirname, 'views'));
 
 app.get('/', async (req, res) => {
   try {
-    const response = await axios.get(`https://determined-blue-bandicoot.cyclic.app/recents`);
-    const topesResponse = await axios.get(`https://determined-blue-bandicoot.cyclic.app/top/1`);
+    const response = await axios.get(`https://ruby-careful-skunk.cyclic.app/recents`);
+    const topesResponse = await axios.get(`https://ruby-careful-skunk.cyclic.app/top/1`);
     
     if (!response.ok && !topesResponse.ok) {
       await new Promise(resolve => setTimeout(resolve, 1000));
@@ -40,7 +40,7 @@ app.get('/manga/:id', async (req, res) => {
     const foto = req.query.foto;
    // console.log(id);
 
-    const response = await fetch(encodeURI(`https://determined-blue-bandicoot.cyclic.app/chapters/${id}`));
+    const response = await fetch(encodeURI(`https://ruby-careful-skunk.cyclic.app/chapters/${id}`));
 
     if (!response.ok) {
     await new Promise(resolve => setTimeout(resolve, 1000));
@@ -66,7 +66,7 @@ app.get('/ler/:id', async (req, res) => {
     const id = req.params.id;
    // console.log(id);
 
-    const response = await fetch(encodeURI(`https://determined-blue-bandicoot.cyclic.app/pages/${id}`));
+    const response = await fetch(encodeURI(`https://ruby-careful-skunk.cyclic.app/pages/${id}`));
 
     if (!response.ok) {
             await new Promise(resolve => setTimeout(resolve, 1000));
